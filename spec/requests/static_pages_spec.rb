@@ -15,6 +15,14 @@ describe "StaticPages" do
 		visit '/static_pages/home'
 		page.should have_content('Sample App')  	
   	end
-
   end
+
+  # Test the content of the Help page
+  describe "Help page" do
+    it "should have the content 'help.html.erb'" do
+    visit '/static_pages/help'
+    page.should have_content('help.html.erb')      
+    end
+  end
+
 end
